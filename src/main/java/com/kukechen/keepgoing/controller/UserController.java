@@ -14,7 +14,7 @@ public class UserController {
     @Autowired
     private UserInfoMapper userInfoMapper;
 
-    @GetMapping("/")
+    @GetMapping("/user/:id")
     public String index() {
         try {
             UserInfo user = userInfoMapper.selectByPrimaryKey(1);
